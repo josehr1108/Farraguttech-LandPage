@@ -1,0 +1,13 @@
+// Styling for the portfolio section
+#industries {
+  .container-fluid {
+    max-width: 1920px;
+    .row div{
+      padding-bottom: 15px;
+    }
+    .custom-size {
+      width: 290px;
+      height: 270px;
+    }
+  }
+}
