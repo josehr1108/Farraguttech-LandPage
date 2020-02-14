@@ -230,72 +230,94 @@
           <div>+1 (202) 555-0149</div>
         </div!-->
       </div>
-      <div class="row" id="formContainer">
-        <h2>Request a service now!</h2>
-        <form class="col-lg-12" id="serviceRequestForm">
-          <div class="form-group row">
-            <label for="contactName" class="col-sm-4 col-form-label">Contact's Full Name</label>
-            <input type="text" class="form-control" id="contactName" required>
-          </div>
-          <div class="form-group row">
-            <label for="contactEmail" class="col-sm-4 col-form-label">Contact's Email</label>
-            <input type="email" class="form-control" id="contactEmail" required>
-          </div>
-          <div class="form-group row">
-            <label for="projectTitle" class="col-sm-4 col-form-label">Project Title</label>
-            <input type="text" class="form-control" id="projectTitle" required>
-          </div>
-          <div class="form-group row">
-            <label for="projectDescription" class="col-sm-4 col-form-label">Project Description</label>
-            <textarea class="form-control" id="projectDescription" cols="100" required></textarea>
-          </div>
-          <div class="form-group row">
-            <label for="serviceRequested" class="col-sm-4 col-form-label">Service Requested</label>
-            <select class="custom-select" id="serviceRequested">
-              <option value="Website/Web Application Development">Website/Web Application Development</option>
-              <option value="Mobile Application Development">Mobile Application Development</option>
-              <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
-              <option value="Digital Marketing">Digital Marketing</option>
-              <option value="Website Maintenance">Website Maintenance</option>
-              <option value="Graphic Design">Graphic Design</option>
-            </select>
-          </div>
-          <div class="form-group row">
-            <label for="projectScope" class="col-sm-4 col-form-label">Project Scope</label>
-            <select class="custom-select" id="projectScope">
-              <option value="Undecided">Undecided</option>
-              <option value="Corporate">Corporate</option>
-              <option value="Small Business">Small Business</option>
-              <option value="Educational">Educational</option>
-              <option value="Non-Profit">Non-Profit</option>
-              <option value="Personal">Personal</option>
-            </select>
-          </div>
-          <div class="form-group row">
-            <label for="projectBudget" class="col-sm-4 col-form-label">Project Budget</label>
-            <select class="custom-select" id="projectBudget">
-              <option value="Not Sure Yet">Not Sure Yet</option>
-              <option value="$500 - $1000">$500 - $1000</option>
-              <option value="$1000 - $2000">$1000 - $2000</option>
-              <option value="$2000 - $5000">$2000 - $5000</option>
-              <option value="$5000 - $10000">$5000 - $10000</option>
-              <option value="$10000 +">$10000 +</option>
-            </select>
-          </div>       
-          <div class="form-group row text-center">
-            <div class="col-sm-12">
-              <button type="submit" class="btn btn-primary">Request service</button>
+
+      <div class="row justify-content-center" id="requestServiceBtnContainer">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#requestModal">
+          Request a service now!
+        </button>
+      </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-primary">
+              <h3 class="modal-title light" id="requestModalLabel">Request a service!</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row" id="formContainer">
+                <form class="col-lg-12" id="serviceRequestForm">
+                  <div class="form-group">
+                    <label for="contactName">Contact's Full Name</label>
+                    <input type="text" class="form-control" id="contactName" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail">Contact's Email</label>
+                    <input type="email" class="form-control" id="contactEmail" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="projectTitle">Project Title</label>
+                    <input type="text" class="form-control" id="projectTitle" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="projectDescription">Project Description</label>
+                    <textarea class="form-control" id="projectDescription" cols="100" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="serviceRequested">Service Requested</label>
+                    <select class="custom-select" id="serviceRequested">
+                      <option value="Website/Web Application Development">Website/Web Application Development</option>
+                      <option value="Mobile Application Development">Mobile Application Development</option>
+                      <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Website Maintenance">Website Maintenance</option>
+                      <option value="Graphic Design">Graphic Design</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="projectScope">Project Scope</label>
+                    <select class="custom-select" id="projectScope">
+                      <option value="Undecided">Undecided</option>
+                      <option value="Corporate">Corporate</option>
+                      <option value="Small Business">Small Business</option>
+                      <option value="Educational">Educational</option>
+                      <option value="Non-Profit">Non-Profit</option>
+                      <option value="Personal">Personal</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="projectBudget">Project Budget</label>
+                    <select class="custom-select" id="projectBudget">
+                      <option value="Not Sure Yet">Not Sure Yet</option>
+                      <option value="$500 - $1000">$500 - $1000</option>
+                      <option value="$1000 - $2000">$1000 - $2000</option>
+                      <option value="$2000 - $5000">$2000 - $5000</option>
+                      <option value="$5000 - $10000">$5000 - $10000</option>
+                      <option value="$10000 +">$10000 +</option>
+                    </select>
+                  </div>       
+                  <div class="form-group text-center">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary">Request service</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
+      
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-light py-5">
     <div class="container">
-      <div class="small text-center text-muted">Copyright &copy; 2019 FarragutTech</div>
+      <div class="small text-center text-muted">Copyright &copy; 2020 FarragutTech</div>
       <div class="small text-center text-muted">FarragutTech is a service of Tennessee Innovation Network LLC. </div>
     </div>
   </footer>
@@ -310,6 +332,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
   <script src="js/smtp.min.js"></script>
   <script src="js/formSubmitHandler.min.js"></script>
 </body>
