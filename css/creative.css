@@ -9601,6 +9601,11 @@ hr.light {
   padding-top: 60px;
 }
 
+#whatWeDo {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;

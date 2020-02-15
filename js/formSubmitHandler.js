@@ -5,6 +5,7 @@ $("#serviceRequestForm").submit(function( event ) {
     event.preventDefault();
 
     var contactFullName = $('#contactName').val();
+    var companyName = $('#companyName').val();
     var contactEmail = $('#contactEmail').val();
     var projectTitle = $('#projectTitle').val();
     var projectDescription = $('#projectDescription').val();
@@ -13,7 +14,7 @@ $("#serviceRequestForm").submit(function( event ) {
     var projectBudget = $('#projectBudget').val();
 
     
-    var emailBody = getEmailBody(contactFullName,contactEmail,projectTitle,
+    var emailBody = getEmailBody(contactFullName,companyName,contactEmail,projectTitle,
                                 projectDescription,serviceRequested,projectScope,projectBudget);
     
     Email.send({
@@ -40,7 +41,7 @@ $("#serviceRequestForm").submit(function( event ) {
     });
 });
 
-function getEmailBody(name,email,title,description,service,scope,budget){
+function getEmailBody(name,companyName,email,title,description,service,scope,budget){
   var str = "<div style=\"background-color:#f5f5f5;width: 100%\"> " +
               "<div style=\"max-width:500px;margin:0 auto;background-color:white;\">" + 
                 "<div style=\"margin:0 auto;background-color:#00b9ff;color: white;height:50px\">"+
@@ -50,6 +51,7 @@ function getEmailBody(name,email,title,description,service,scope,budget){
                   "<p>There is a new service request sent from the website, here is the information provided:</p>"+
                   "<ul>"+
                     "<li>Contact Full Name: "+ name +"</li>"+
+                    "<li>Company/Organization Name: "+ companyName +"</li>"+
                     "<li>Contact Email: "+ email +"</li>"+
                     "<li>Project Title: "+ title +"</li>"+
                     "<li>Project Description: "+ description +"</li>"+

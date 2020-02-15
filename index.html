@@ -78,20 +78,14 @@
   <section class="page-section bg-primary" id="about">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-6 col-sm-12 text-center">
+        <div class="col-12 text-center">
           <h2 class="text-white mt-0">What we do?</h2>
           <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">
+          <p class="text-white-50" id="whatWeDo">
             We are a professional website design & development agency that aims to help
             great organizations create greater impact. We can help you with digital strategy,
-            web design and development, and digital marketing activities.<br>
-            We merge creativity and technology to help brands grow in an age of digital transformation.
-          </p>
-        </div>
-        <div class="col-lg-6 col-sm-12 text-center">
-          <h2 class="text-white mt-0">Our Mission</h2>
-          <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">
+            web design and development, and digital marketing activities.<br><br>
+            We merge creativity and technology to help brands grow in an age of digital transformation.<br><br>
             Our mission is to harness our design team's creativity into a viable solution for your business
           </p>
         </div>
@@ -111,7 +105,7 @@
         <div class="col-lg-4 col-md-6 text-center">
           <div class="mt-5">
             <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Web design and development</h3>
+            <h3 class="h4 mb-2">Web Design and Development</h3>
             <p class="text-muted mb-0">
               We combine professional web design skills with outstanding
               development expertise to create powerful solutions.
@@ -121,7 +115,7 @@
         <div class="col-lg-4 col-md-6 text-center">
           <div class="mt-5">
             <i class="fas fa-4x fa-bullhorn text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Digital marketing strategy</h3>
+            <h3 class="h4 mb-2">Digital Marketing Strategy</h3>
             <p class="text-muted mb-0">
               Increase your online presence with services like Search Engine
               Optimization(SEO), Social Media, Email Marketing, etc.</p>
@@ -130,7 +124,7 @@
         <div class="col-lg-4 col-md-6 text-center">
           <div class="mt-5">
             <i class="fas fa-4x fa-cogs text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Website maintenance</h3>
+            <h3 class="h4 mb-2">Website Maintenance</h3>
             <p class="text-muted mb-0">
               We can help your website keep up with the ever-changing and evolving
               industry, from simple content updates to extensive design updates.
@@ -140,7 +134,7 @@
         <div class="col-lg-6 col-md-6 text-center">
           <div class="mt-5">
             <i class="fas fa-4x fa-file-image text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Graphic design</h3>
+            <h3 class="h4 mb-2">Graphic Design</h3>
             <p class="text-muted mb-0">
               Captivating images for your business, we deliver quality design concepts
               including marketing materials, vector designs, infographics, logos, etc.
@@ -150,7 +144,7 @@
         <div class="col-lg-6 col-md-12 text-center">
           <div class="mt-5">
             <i class="fas fa-4x fa-mobile-alt text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Mobile development</h3>
+            <h3 class="h4 mb-2">Mobile App Development</h3>
             <p class="text-muted mb-0">
               We provide native iOS, Android and hybrid mobile application development
               services so you can reach your customers on their favorite devices.
@@ -199,9 +193,13 @@
           <img class="img-fluid rounded-circle custom-size" src="img/industries/thumbnails/nonprofit.jpg" alt="">
           <h4 class="mt-3">Nonprofits</h4>
         </div>
-        <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+        <div class="col-lg-4 col-sm-6 text-center">
           <img class="img-fluid rounded-circle custom-size" src="img/industries/thumbnails/retail.jpg" alt="">
           <h4 class="mt-3">Retail</h4>
+        </div>
+        <div class="col-lg-12 col-sm-6 text-center">
+          <img class="img-fluid rounded-circle custom-size" src="img/industries/thumbnails/realState.jpg" alt="">
+          <h4 class="mt-3">Real State</h4>
         </div>
       </div>
     </div>
@@ -210,22 +208,21 @@
   <!-- Contact Section -->
   <section class="page-section" id="contact">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
+      <div!-- class="row justify-content-center">
+        <div class="col-lg-12 text-center">
           <h2 class="mt-0">Let's Get In Touch!</h2>
           <hr class="divider my-4">
           <p class="text-muted mb-5">
-            Ready to start your next project with us?
+            Ready to start your next project with us?<br>
             Send us an email or request a project completing the form
             below, we will get back to you as soon as possible!
           </p>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
+        <!--div class="col-lg-4 mr-auto text-center">
           <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
           <a class="d-block" href="mailto:farraguttech@gmail.com">farraguttech@gmail.com</a>
         </div>
-        <!--div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
           <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
           <div>+1 (202) 555-0149</div>
         </div!-->
@@ -251,11 +248,15 @@
               <div class="row" id="formContainer">
                 <form class="col-lg-12" id="serviceRequestForm">
                   <div class="form-group">
-                    <label for="contactName">Contact's Full Name</label>
+                    <label for="contactName">Contact Full Name</label>
                     <input type="text" class="form-control" id="contactName" required>
                   </div>
                   <div class="form-group">
-                    <label for="contactEmail">Contact's Email</label>
+                    <label for="companyName">Company/Organization Name</label>
+                    <input type="text" class="form-control" id="companyName" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail">Contact Email</label>
                     <input type="email" class="form-control" id="contactEmail" required>
                   </div>
                   <div class="form-group">
@@ -280,12 +281,12 @@
                   <div class="form-group">
                     <label for="projectScope">Project Scope</label>
                     <select class="custom-select" id="projectScope">
-                      <option value="Undecided">Undecided</option>
                       <option value="Corporate">Corporate</option>
                       <option value="Small Business">Small Business</option>
                       <option value="Educational">Educational</option>
                       <option value="Non-Profit">Non-Profit</option>
                       <option value="Personal">Personal</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div class="form-group">
